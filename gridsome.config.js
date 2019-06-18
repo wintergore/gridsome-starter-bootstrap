@@ -1,7 +1,8 @@
 module.exports = {
-  siteName: 'Gridsome starter bootstrap',
-  siteDescription: 'A starter project for Gridsome with Bootstrap and some other useful tools.',
-  siteUrl: 'https://gridsome-starter-bootstrap.loke.dev',
+  siteName: 'Pitt BBQ',
+  siteDescription: 'Authentic Southern American pitt style barbeque caterer based in Middlesbrough catering to the surrounding areas and the North East of England.',
+  siteUrl: 'https://wintergore.github.io',
+  pathPrefix: '/gridsome-starter-bootstrap',
   plugins: [
     {
       use: '@gridsome/source-filesystem',

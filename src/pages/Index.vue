@@ -1,5 +1,7 @@
 <template>
   <Layout>
+    <template v-slot:hero>Hello World</template>
+    <template v-slot:main>
     <img class="greet-image" src="../../uploads/hello.svg" />
 
     <h2 class="mb-4">Gridsome starter bootstrap</h2>
@@ -79,7 +81,7 @@
 
       <li>Happy hacking 🎉🙌</li>
     </ol>
-
+    </template>
   </Layout>
 </template>
 
