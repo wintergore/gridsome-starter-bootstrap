@@ -1,19 +1,23 @@
 <template>
-    <md-list>
-        <md-list-item to="/about">
-          <md-icon>whatshot</md-icon>
-          <span class="md-list-item-text">About</span>
-        </md-list-item>
-        <md-list-item to="/blog">
-          <md-icon>comment</md-icon>
-          <span class="md-list-item-text">Blog</span>
-        </md-list-item>
+  <md-list>
+    <md-list-item to="/">
+      <md-icon>home</md-icon>
+      <span class="md-list-item-text">Home</span>
+    </md-list-item>
+    <md-list-item to="/about">
+      <md-icon>whatshot</md-icon>
+      <span class="md-list-item-text">About</span>
+    </md-list-item>
+    <md-list-item to="/blog">
+      <md-icon>comment</md-icon>
+      <span class="md-list-item-text">Blog</span>
+    </md-list-item>
 
-        <md-list-item to="/contact">
-          <md-icon>call</md-icon>
-          <span class="md-list-item-text">Contact</span>
-        </md-list-item>
-      </md-list>
+    <md-list-item to="/contact">
+      <md-icon>call</md-icon>
+      <span class="md-list-item-text">Contact</span>
+    </md-list-item>
+  </md-list>
 </template>
 
 <static-query>
@@ -25,11 +29,9 @@ query {
 </static-query>
 
 <script>
-
 export default {
-  components: {
-  },
-  props: ['menuVisible']
+  components: {},
+  props: ["menuVisible"]
 };
 </script>
 
