@@ -2,24 +2,28 @@
   <div class="page-container">
     <md-app md-waterfall md-mode="flexible">
       <md-app-toolbar class="md-large md-primary">
+        
         <div class="md-toolbar-row">
-          <div class="md-toolbar-section-start">
-            <md-button class="md-icon-button md-medium-hide " @click="menuVisible = !menuVisible">
+          <div v-if="$mq === 'xs' |  $mq === 'sm'" class="md-toolbar-section-start">
+            <md-button class="md-icon-button" @click="menuVisible = !menuVisible">
+              <mq-layout :mq="['xs', 'sm']">
               <md-icon>menu</md-icon>
+              </mq-layout>
             </md-button>
           </div>
-          <div class="md-toolbar-section-end">
-            <md-button class="md-icon-button md-large-hide md-xlarge-hide">
-              <md-icon>more_vert</md-icon>
+          <div v-if="$mq === 'xs' |  $mq === 'sm'"  class="md-toolbar-section-end">
+            <md-button class="md-icon-button">
+                <md-icon>more_vert</md-icon>
             </md-button>
           </div>
         </div>
+        
         <div class="md-toolbar-row md-toolbar-offset title-container">
           <md-button class="md-small-hide" to="/">ABOUT</md-button>
           <md-button class="md-small-hide" to="/">REVIEWS</md-button>
           <md-button class="md-small-hide" to="/">GALLERY</md-button>
           <div class="logo">
-            <g-image immediate class="pig" src="~/assets/images/logo.png"></g-image>
+            <g-image immediate class="pig" src="~/assets/images/logo.png" width="295"></g-image>
           </div>
           <md-button class="md-small-hide" to="/">MENUS</md-button>
           <md-button class="md-small-hide" to="/">CATERING</md-button>
@@ -106,6 +110,7 @@ body {
       height: 100% !important;
       width: auto;
       padding: 10px 0;
+      max-width: none;
     }
   }
   .md-display-1 {
