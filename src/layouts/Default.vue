@@ -4,31 +4,29 @@
       <md-app-toolbar class="md-large md-primary">
         <div class="md-toolbar-row">
           <div class="md-toolbar-section-start">
-            <md-button class="md-icon-button" @click="menuVisible = !menuVisible">
+            <md-button class="md-icon-button md-medium-hide " @click="menuVisible = !menuVisible">
               <md-icon>menu</md-icon>
             </md-button>
           </div>
           <div class="md-toolbar-section-end">
-            <md-button class="md-icon-button">
+            <md-button class="md-icon-button md-large-hide md-xlarge-hide">
               <md-icon>more_vert</md-icon>
             </md-button>
           </div>
         </div>
         <div class="md-toolbar-row md-toolbar-offset title-container">
-          <md-button class="md-small-hide md-medium-hide" to="/">ABOUT</md-button>
-          <md-button class="md-small-hide md-medium-hide" to="/">REVIEWS</md-button>
-          <md-button class="md-small-hide md-medium-hide" to="/">GALLERY</md-button>
+          <md-button class="md-small-hide" to="/">ABOUT</md-button>
+          <md-button class="md-small-hide" to="/">REVIEWS</md-button>
+          <md-button class="md-small-hide" to="/">GALLERY</md-button>
           <div class="logo">
-            <g-image class="pig" src="~/assets/images/logo.png"></g-image>
+            <g-image immediate class="pig" src="~/assets/images/logo.png"></g-image>
           </div>
-          <md-button class="md-small-hide md-medium-hide" to="/">MENUS</md-button>
-          <md-button class="md-small-hide md-medium-hide" to="/">CATERING</md-button>
-          <md-button class="md-small-hide md-medium-hide"  to="/">CONTACT</md-button>
+          <md-button class="md-small-hide" to="/">MENUS</md-button>
+          <md-button class="md-small-hide" to="/">CATERING</md-button>
+          <md-button class="md-small-hide" to="/">CONTACT</md-button>
           <!-- <div class="md-title md-display-1">
             <span>MY WEBSITE NAME</span>
-          </div> -->
-
-           
+          </div>-->
         </div>
       </md-app-toolbar>
 
@@ -98,7 +96,7 @@ body {
   align-self: center !important;
   height: 100%;
   left: 0;
-  
+
   justify-content: center;
   .logo {
     display: flex;
