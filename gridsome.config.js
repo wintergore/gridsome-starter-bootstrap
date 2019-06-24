@@ -1,5 +1,5 @@
 module.exports = {
-  siteName: 'Pitt BBQ',
+  siteName: `Pitt BBQ`,
   siteDescription: 'Authentic Southern American pitt style barbeque caterer based in Middlesbrough catering to the surrounding areas and the North East of England.',
   siteUrl: 'https://wintergore.github.io',
   pathPrefix: '/gridsome-starter-bootstrap',

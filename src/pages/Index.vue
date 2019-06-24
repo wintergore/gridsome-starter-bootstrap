@@ -1,9 +1,13 @@
 <template>
   <Layout>
+    
     <template v-slot:hero>Hello World</template>
     <template v-slot:main>
     <img class="greet-image" src="../../uploads/hello.svg" />
-
+    <pre>
+      settings:
+      {{ }}
+    </pre>
     <h2 class="mb-4">Gridsome starter bootstrap</h2>
     <p>
       This is a starter project for Gridsome that comes with many features out of the box. It utilizes Bootstrap that is well known
@@ -87,9 +91,15 @@
 
 <script>
 export default {
+  data() {
+        return {
+            settings: require("../../data/theme.json")
+        }
+    },
   metaInfo: {
-    title: 'Gridsome starter bootstrap'
-  }
+    title: 'test',
+  },
+    
 }
 </script>
 

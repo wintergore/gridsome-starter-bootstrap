@@ -1,7 +1,7 @@
 <template>
   <div class="page-container">
-    <md-app md-waterfall md-mode="flexible">
-      <md-app-toolbar class="md-large md-primary">
+    <md-app md-waterfall :md-mode="($mq === 'xs' |  $mq === 'sm') ? 'reveal': 'flexible'">
+      <md-app-toolbar class=" md-primary" :class="[$mq, ($mq === 'xs' |  $mq === 'sm') ? '': 'md-large' ]">
         
         <div class="md-toolbar-row">
           <div v-if="$mq === 'xs' |  $mq === 'sm'" class="md-toolbar-section-start">
@@ -16,15 +16,18 @@
                 <md-icon>more_vert</md-icon>
             </md-button>
           </div>
+          <div v-if="$mq === 'xs' |  $mq === 'sm'" class="logo">
+            <g-image immediate class="pig" src="~/assets/images/logo.jpg" width="295"></g-image>
+          </div>
         </div>
         
-        <div class="md-toolbar-row md-toolbar-offset title-container">
+        <div v-if="$mq === 'md' |  $mq === 'lg' |  $mq === 'xl'" class="md-toolbar-row md-toolbar-offset title-container" :class="$mq">
           <md-button class="md-small-hide" to="/">ABOUT</md-button>
           <md-button class="md-small-hide" to="/">REVIEWS</md-button>
           <md-button class="md-small-hide" to="/">GALLERY</md-button>
-          <div class="logo">
-            <g-image immediate class="pig" src="~/assets/images/logo.png" width="295"></g-image>
-          </div>
+          <mq-layout mq="md+"  class="logo">
+            <g-image immediate class="pig" src="~/assets/images/logo.jpg" width="295"></g-image>
+          </mq-layout>
           <md-button class="md-small-hide" to="/">MENUS</md-button>
           <md-button class="md-small-hide" to="/">CATERING</md-button>
           <md-button class="md-small-hide" to="/">CONTACT</md-button>
@@ -66,7 +69,7 @@ export default {
   },
   name: "Flexible",
   data: () => ({
-    menuVisible: false
+    menuVisible: false,
   })
 };
 </script>
@@ -86,10 +89,19 @@ body {
 
   .md-app-container {
     overflow-x: hidden; //fixes overflow issue, exists in vuematerial docs
+    .md-app-toolbar {
+      min-height: 90px !important;
+    }
   }
 }
 .md-app-toolbar {
-  height: 192px;
+  height: 150px;
+  &.xs, &.sm {
+    .logo > img {
+      height: auto;
+      width: 230px;
+    }
+  }
 }
 
 .title-container {
@@ -100,8 +112,12 @@ body {
   align-self: center !important;
   height: 100%;
   left: 0;
-
   justify-content: center;
+
+  &.xs &.sm {
+    position: absolute;
+  }
+
   .logo {
     display: flex;
     width: auto;
@@ -109,8 +125,9 @@ body {
     img {
       height: 100% !important;
       width: auto;
-      padding: 10px 0;
+      padding: 10px 0; //test with 0 0 12% 0; //and fix mobile height.
       max-width: none;
+
     }
   }
   .md-display-1 {
