@@ -1,7 +1,11 @@
 <template>
   <Layout>
     
-    <template v-slot:hero>Hello World</template>
+    <template v-slot:hero>
+      Hello World 
+      {{ $page.pages.heroTitle }}
+      {{ $page.pages.heroSubTitle}}
+    </template>
     <template v-slot:main>
     <img class="greet-image" src="../../uploads/hello.svg" />
     <pre>
@@ -89,11 +93,22 @@
   </Layout>
 </template>
 
+<page-query>
+query Pages{
+   pages: pages(path: "/page/home"){
+    heroTitle
+    heroSubTitle
+  }
+}
+</page-query>
+
 <script>
 export default {
   data() {
+        console.log('page', $page);
         return {
-            settings: require("../../data/theme.json")
+            settings: require("../../data/theme.json"),
+            heroTitle: this.heroTitle
         }
     },
   metaInfo: {
