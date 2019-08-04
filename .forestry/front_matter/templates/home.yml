@@ -17,3 +17,5 @@ fields:
   default: "/uploads/134 - SB-134.jpg"
   label: Home Page Banner Image
   description: Keep file size under 1mb
+pages:
+- page/home.md
