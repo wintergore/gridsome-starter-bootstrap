@@ -3,17 +3,17 @@ label: Home
 hide_body: false
 fields:
 - type: text
-  name: title
-  label: title
+  name: hero_title
+  label: Hero title
+  description: The title that appears over the hero banner image.
 - type: textarea
-  name: excerpt
-  label: excerpt
-- type: datetime
-  name: date
-  label: date
-- type: text
-  name: author
-  label: author
-- type: file
-  name: image
-  label: image
+  name: hero_sub_title
+  label: Hero Sub Title
+  description: The subtitle that appears over the hero banner image.
+- name: hero_image
+  type: file
+  config:
+    maxSize: 250
+  default: "/uploads/134 - SB-134.jpg"
+  label: Home Page Banner Image
+  description: Keep file size under 1mb
