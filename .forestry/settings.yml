@@ -4,9 +4,11 @@ auto_deploy: false
 admin_path: "/static/admin"
 webhook_url: 
 sections:
-- type: document
-  path: home
-  label: Home
+- type: directory
+  path: pages
+  label: Pages
+  create: all
+  match: "**/*.md"
 - type: directory
   path: blog
   label: Blog
