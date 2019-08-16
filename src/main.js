@@ -16,7 +16,7 @@ import {
 } from 'vue-material/dist/components'
 
 import 'vue-material/dist/vue-material.min.css'
-import 'vue-material/dist/theme/black-green-dark.css'
+//import 'vue-material/dist/theme/black-green-dark.css'
 
 import VueMq from 'vue-mq';
 

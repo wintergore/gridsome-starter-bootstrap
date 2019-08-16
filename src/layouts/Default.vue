@@ -43,13 +43,19 @@
       </md-app-drawer>
 
       <md-app-content>
-        <slot name="hero"/>
         <div class="md-layout">
-          <div class="md-layout-item md-size-15"></div>
-          <div class="md-layout-item">
-            <slot name="main"/>
+          <div class="md-layout-item md-size-100">
+            <slot name="hero"/>
           </div>
-          <div class="md-layout-item md-size-15"></div>
+          <div class="md-layout-item md-size-100 px-20">
+            <div class="md-layout">
+              <div class="md-layout-item md-size-15"></div>
+              <div class="md-layout-item">
+                <slot name="main"/>
+              </div>
+              <div class="md-layout-item md-size-15"></div>
+            </div>
+          </div>
         </div>
       </md-app-content>
     </md-app>
@@ -76,6 +82,17 @@ export default {
 
 
 <style lang="scss">
+@import "~vue-material/dist/theme/engine"; // Import the theme engine
+
+@include md-register-theme("default", (
+    primary: md-get-palette-color(blue, A200), // The primary color of your application
+    accent: md-get-palette-color(red, A200), // The accent or secondary color
+    theme: dark // This can be dark or light
+));
+
+@import "~vue-material/dist/theme/all"; // Apply the theme
+
+
 body {
   font-family: Roboto, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -103,6 +120,14 @@ body {
     }
   }
 }
+
+.md-app-content {
+  padding: 0 !important;
+  .px-20 {
+    padding:0 20px;
+  }
+}
+
 
 .title-container {
   margin: 0 44px !important;

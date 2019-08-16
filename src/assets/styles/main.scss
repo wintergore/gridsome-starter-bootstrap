@@ -1,2 +1,15 @@
+@import "~vue-material/dist/theme/engine"; // Import the theme engine
+
+@include md-register-theme("default", (
+  primary: md-get-palette-color(grey, 900), // The primary color of your application
+  background: md-get-palette-color(black, 900),
+  accent: md-get-palette-color(black, A200), // The accent or secondary color
+  theme: dark
+));
+
+@import "~vue-material/dist/theme/all"; // Apply the theme
+
 @import 'custom.scss';
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic|Material+Icons");
+
+
