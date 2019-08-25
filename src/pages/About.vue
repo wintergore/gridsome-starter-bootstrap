@@ -1,18 +1,35 @@
 <template>
   <Layout>
-    <template v-slot:hero>Hello World</template>
+    <template v-slot:hero>
+      <div class="hero-banner">
+        <g-image :src="$page.pages.heroImage"></g-image>
+        <div class="hero-banner__text">
+          {{ $page.pages.heroTitle }}
+          {{ $page.pages.heroSubTitle }}
+        </div>
+      </div>
+    </template>
     <template v-slot:main>
       <h1 class="mb-4">About</h1>
-      <img class="about-image" src="../../uploads/profile.svg">
-
-      <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, platea elementum mus lectus molestie et. Conubia taciti nunc proin vehicula et nascetur lacinia commodo non, penatibus vel dui pharetra inceptos himenaeos orci viverra ad, quis ullamcorper sit scelerisque nibh praesent imperdiet vulputate.</p>
-
-      <p>Eros morbi himenaeos eget sagittis parturient, netus sapien pharetra semper iaculis orci, elementum ullamcorper eleifend aenean. Orci ligula euismod taciti conubia facilisis mattis laoreet, cras aliquam ultrices purus augue morbi, a litora feugiat dapibus per lacinia.</p>
-
-      <p>Conubia non mi vulputate natoque nullam sem nascetur fames felis, hendrerit imperdiet pretium urna a augue nec quis lorem, orci sed vehicula pulvinar viverra nam lacus porttitor. Praesent id elementum aliquet dolor himenaeos primis urna vestibulum, molestie sagittis cursus facilisi tellus phasellus lacinia, viverra porttitor tincidunt tortor habitasse class luctus.</p>
+      <p>Smoklahoma is an authentic southern American pitt style barbeque caterer based in Middlesbrough catering to the surrounding areas and the North East of England.</p>
+      <p>We provide catering at any event from weddings, corporate events and private parties to public events and festivals.</p>
+      <p>We’re all about serving quality produce, cooked live on site using flavoured lump wood/charcoal giving that authentic barbecue taste we all crave for.</p>
+      <p>We can cater for any number and will work to your needs giving guests an unforgettable experience.</p>
+      <p>Any questions please ask and we look forward to hearing from you.</p>
+      <p>In the meantime take a look at reviews on our site, which are taken from our facebook page @smoklahomapitbbq and our add-to-event page to get an idea of what we're about or even better pop along to one of our many street food events and say hello and have a feed.</p>
     </template>
   </Layout>
 </template>
+
+<page-query>
+query Pages{
+   pages(path: "/page/home"){
+    heroTitle
+    heroSubTitle
+    heroImage (width: 1920, height: 300, quality: 90)
+  }
+}
+</page-query>
 
 <script>
 export default {

@@ -25,9 +25,9 @@
           <md-button class="md-small-hide" to="/about">ABOUT</md-button>
           <md-button class="md-small-hide" to="/reviews">REVIEWS</md-button>
           <md-button class="md-small-hide" to="/gallery">GALLERY</md-button>
-          <mq-layout mq="md+"  class="logo">
+          <mq-layout mq="md+"  class="logo" >
             <g-link to="/">
-            <g-image immediate class="pig" src="~/assets/images/logo.jpg" width="295" ></g-image>
+              <g-image immediate class="pig" src="~/assets/images/logo.jpg" width="295" ></g-image>
             </g-link>
           </mq-layout>
           <md-button class="md-small-hide" to="/menus">MENUS</md-button>
@@ -51,12 +51,15 @@
           </div>
           <div class="md-layout-item md-size-100 px-20">
             <div class="md-layout">
-              <div class="md-layout-item md-size-15"></div>
-              <div class="md-layout-item">
+              <div class="md-layout-item md-size-25"></div>
+              <div class="md-layout-item main">
                 <slot name="main"/>
               </div>
-              <div class="md-layout-item md-size-15"></div>
+              <div class="md-layout-item md-size-25"></div>
             </div>
+          </div>
+          <div class="md-layout-item md-size-100 px-20 footer">
+          ©2019 Smoklahoma. All rights reserved.
           </div>
         </div>
       </md-app-content>
@@ -101,6 +104,14 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.5;
+
+  p {
+    font-size: 1.1em;
+  }
+
+  .footer {
+    text-align: right;
+  }
 }
 
 .md-app {
@@ -130,6 +141,11 @@ body {
   }
 }
 
+.md-layout-item.main {
+  width: 500px;
+  padding: 50px 0px 100px 0px;
+}
+
 
 .title-container {
   margin: 0 44px !important;
@@ -149,13 +165,15 @@ body {
     display: flex;
     width: auto;
     height: 100%;
-    img {
+
+      a, img {
       height: 100% !important;
       width: auto;
       padding: 10px 0; //test with 0 0 12% 0; //and fix mobile height.
       max-width: none;
-
+    
     }
+    
   }
   .md-display-1 {
     margin: 0;
