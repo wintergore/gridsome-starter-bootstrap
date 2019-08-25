@@ -22,15 +22,17 @@
         </div>
         
         <div v-if="$mq === 'md' |  $mq === 'lg' |  $mq === 'xl'" class="md-toolbar-row md-toolbar-offset title-container" :class="$mq">
-          <md-button class="md-small-hide" to="/">ABOUT</md-button>
-          <md-button class="md-small-hide" to="/">REVIEWS</md-button>
-          <md-button class="md-small-hide" to="/">GALLERY</md-button>
+          <md-button class="md-small-hide" to="/about">ABOUT</md-button>
+          <md-button class="md-small-hide" to="/reviews">REVIEWS</md-button>
+          <md-button class="md-small-hide" to="/gallery">GALLERY</md-button>
           <mq-layout mq="md+"  class="logo">
-            <g-image immediate class="pig" src="~/assets/images/logo.jpg" width="295"></g-image>
+            <g-link to="/">
+            <g-image immediate class="pig" src="~/assets/images/logo.jpg" width="295" ></g-image>
+            </g-link>
           </mq-layout>
-          <md-button class="md-small-hide" to="/">MENUS</md-button>
-          <md-button class="md-small-hide" to="/">CATERING</md-button>
-          <md-button class="md-small-hide" to="/">CONTACT</md-button>
+          <md-button class="md-small-hide" to="/menus">MENUS</md-button>
+          <md-button class="md-small-hide" to="/catering">CATERING</md-button>
+          <md-button class="md-small-hide" to="/contact">CONTACT</md-button>
           <!-- <div class="md-title md-display-1">
             <span>MY WEBSITE NAME</span>
           </div>-->
