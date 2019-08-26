@@ -51,15 +51,15 @@
           </div>
           <div class="md-layout-item md-size-100 px-20">
             <div class="md-layout">
-              <div class="md-layout-item md-size-25"></div>
+              <div class="md-layout-item md-size-20"></div>
               <div class="md-layout-item main">
                 <slot name="main"/>
               </div>
-              <div class="md-layout-item md-size-25"></div>
+              <div class="md-layout-item md-size-20"></div>
             </div>
           </div>
           <div class="md-layout-item md-size-100 px-20 footer">
-          ©2019 Smoklahoma. All rights reserved.
+          ©{{ new Date().getFullYear() }} Smoklahoma. All rights reserved.
           </div>
         </div>
       </md-app-content>
