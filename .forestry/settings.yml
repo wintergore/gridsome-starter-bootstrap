@@ -5,9 +5,11 @@ admin_path: "/static/admin"
 webhook_url: 
 sections:
 - type: heading
-  label: gallery
-- type: heading
   label: Content
+- type: document
+  path: gallery
+  label: gallery
+  match: "**/*"
 - type: directory
   path: page
   label: Pages
