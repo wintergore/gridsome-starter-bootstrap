@@ -18,4 +18,6 @@ fields:
   label: Home Page Banner Image
   description: Keep file size under 1mb
 pages:
+- page/file.md
+- page/About.md
 - page/home.md
