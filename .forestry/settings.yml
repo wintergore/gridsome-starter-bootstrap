@@ -9,7 +9,6 @@ sections:
 - type: document
   path: gallery
   label: gallery
-  match: "**/*"
 - type: directory
   path: page
   label: Pages
