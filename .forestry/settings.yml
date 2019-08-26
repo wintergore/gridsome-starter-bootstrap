@@ -4,10 +4,8 @@ auto_deploy: false
 admin_path: "/static/admin"
 webhook_url: 
 sections:
-- type: document
-  path: gallery
-  label: Gallery
-  match: "**/*"
+- type: heading
+  label: gallery
 - type: heading
   label: Content
 - type: directory
