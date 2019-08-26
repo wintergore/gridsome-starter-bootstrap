@@ -20,6 +20,10 @@ import 'vue-material/dist/vue-material.min.css'
 
 import VueMq from 'vue-mq';
 
+// import VueInstagram from 'vue-instagram'
+import VuePictureSwipe from 'vue-picture-swipe'
+
+
 export default function (Vue, { router, head, isClient }) {
   Vue.component('Layout', DefaultLayout)
   Vue.mixin(checkIfMobile)
@@ -34,6 +38,11 @@ export default function (Vue, { router, head, isClient }) {
   Vue.use(MdList)
   Vue.use(MdTabs)
 
+  // //vue-instagram
+  // Vue.use(VueInstagram)
+
+  //vue-picture-swipe
+  Vue.component('vue-picture-swipe', VuePictureSwipe)
   //vue-mq
   Vue.use(VueMq, {
     breakpoints: {

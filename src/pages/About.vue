@@ -21,7 +21,12 @@
           <p>In the meantime take a look at reviews on our site, which are taken from our facebook page @smoklahomapitbbq and our add-to-event page to get an idea of what we're about or even better pop along to one of our many street food events and say hello and have a feed.</p>
         </div>
         <div class="md-layout-item">
-          
+          test
+          <vue-picture-swipe
+            :items="[
+          { src: $page.pages.galleryImage.src, thumbnail: $page.pages.galleryThumbImage.srcset[0], w: $page.pages.galleryImage.size.width, h: $page.pages.galleryImage.size.height }
+          ]"
+          ></vue-picture-swipe>
         </div>
       </div>
     </template>
@@ -30,10 +35,12 @@
 
 <page-query>
 query Pages{
-   pages(path: "/page/home"){
+  pages(path: "/page/home"){
     heroTitle
     heroSubTitle
     heroImage (width: 1920, height: 300, quality: 90)
+    galleryImage: heroImage (width:  640, height:  640, quality: 90)
+    galleryThumbImage: heroImage (width: 160, height: 160, quality: 90)
   }
 }
 </page-query>
