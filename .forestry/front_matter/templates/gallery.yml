@@ -7,3 +7,5 @@ fields:
   config: {}
   label: images
   description: A gallery of images
+pages:
+- page/gallery.md
