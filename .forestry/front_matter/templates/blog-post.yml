@@ -21,3 +21,5 @@ fields:
   label: image
   description: blog image
   default: "/uploads/06 - SB-6.jpg"
+pages:
+- blog/cupcake-ipsum.md
