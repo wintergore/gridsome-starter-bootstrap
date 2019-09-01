@@ -1,96 +1,36 @@
 <template>
   <Layout>
-    <template v-slot:hero>Hello World</template>
+    <template v-slot:hero>
+      <div class="hero-banner">
+        <g-image :src="$page.pages.heroImage"></g-image>
+        <div class="hero-banner__text">
+          {{ $page.pages.heroTitle }}
+          {{ $page.pages.heroSubTitle }}
+        </div>
+      </div>
+    </template>
     <template v-slot:main>
       <h1 class="mb-4">Contact</h1>
-      <div>
-        <b-form
-          name="contact"
-          method="post"
-          @submit.prevent="handleSubmit"
-          action="/success/"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
-        >
-          <input type="hidden" name="name" value="contact">
-          <p hidden>
-            <label>
-              Don’t fill this out:
-              <input name="bot-field">
-            </label>
-          </p>
-          <b-form-group id="input-group-2" label="Name:" label-for="form-name">
-            <b-form-input
-              id="name"
-              name="name"
-              v-model="form.name"
-              required
-              placeholder="Enter name"
-            />
-          </b-form-group>
-
-          <b-form-group id="input-group-1" label="Email:" label-for="email">
-            <b-form-input
-              id="email"
-              v-model="form.email"
-              name="email"
-              type="email"
-              required
-              placeholder="Enter email"
-            />
-          </b-form-group>
-
-          <b-form-group id="input-group-3" label="Message:" label-for="message">
-            <b-form-textarea
-              id="message"
-              name="message"
-              v-model="form.message"
-              required
-              placeholder="Enter message"
-            />
-          </b-form-group>
-
-          <b-button type="submit" variant="primary">Submit</b-button>
-        </b-form>
-      </div>
     </template>
   </Layout>
 </template>
+
+<page-query>
+query Pages{
+  pages(path: "/page/home"){
+    heroTitle
+    heroSubTitle
+    heroImage (width: 1920, height: 300, quality: 90)
+    galleryImage: heroImage (width:  640, height:  640, quality: 90)
+    galleryThumbImage: heroImage (width: 160, height: 160, quality: 90)
+  }
+}
+</page-query>
 
 <script>
 export default {
   metaInfo: {
     title: "Contact"
-  },
-  data() {
-    return {
-      form: {
-        name: "",
-        email: "",
-        message: ""
-      }
-    };
-  },
-  methods: {
-    encode(data) {
-      return Object.keys(data)
-        .map(
-          key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-        )
-        .join("&");
-    },
-    handleSubmit(e) {
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: this.encode({
-          "form-name": e.target.getAttribute("name"),
-          ...this.form
-        })
-      })
-        .then(() => this.$router.push("/success"))
-        .catch(error => alert(error));
-    }
   }
 };
 </script>

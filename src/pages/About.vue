@@ -23,10 +23,13 @@
         <div class="md-layout-item">
           test
           <vue-picture-swipe
+            :items="$page.pages.images"
+          ></vue-picture-swipe>
+          <!-- <vue-picture-swipe
             :items="[
           { src: $page.pages.galleryImage.src, thumbnail: $page.pages.galleryThumbImage.srcset[0], w: $page.pages.galleryImage.size.width, h: $page.pages.galleryImage.size.height }
           ]"
-          ></vue-picture-swipe>
+          ></vue-picture-swipe> -->
         </div>
       </div>
     </template>
@@ -39,8 +42,14 @@ query Pages{
     heroTitle
     heroSubTitle
     heroImage (width: 1920, height: 300, quality: 90)
-    galleryImage: heroImage (width:  640, height:  640, quality: 90)
-    galleryThumbImage: heroImage (width: 160, height: 160, quality: 90)
+  }
+}
+</page-query>
+
+<page-query>
+query Gallery{
+   pages(path: "/page/gallery"){
+    images
   }
 }
 </page-query>

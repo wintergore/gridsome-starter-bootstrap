@@ -11,9 +11,9 @@
         class="blog-post"
       >
         <div class="media my-5">
-          <g-image immediate :src="item.node.image" class="mr-3" alt="image"/>
+          <g-image immediate :src="item.node.image" class="mr-3" alt="image" />
           <div class="media-body">
-            <h5 class="mt-0">{{item.node.title}}</h5>
+            <h5 class="mt-0">{{ item.node.title }}</h5>
             <p class="text-dark">{{item.node.excerpt}}</p>
           </div>
         </div>
@@ -32,11 +32,26 @@ query Blog {
         title
         excerpt
         image
+        date
       }
     }
   }
 }
 </page-query>
+
+<script>
+export default {
+  metaInfo: {
+    title: "About"
+  },
+  methods: {
+    formatDate: function(item) {
+      var dt = new Date(item);
+      return `${dt.getDate() + 1}.${dt.getMonth() + 1}.${dt.getFullYear()}`;
+    }
+  }
+};
+</script>
 
 <style lang="scss" scoped>
 .media {

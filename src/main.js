@@ -13,15 +13,15 @@ import {
   MdButton,
   MdList,
   MdTabs
-} from 'vue-material/dist/components'
+} from '../node_modules/vue-material/dist/components'
 
-import 'vue-material/dist/vue-material.min.css'
+import '../node_modules/vue-material/dist/vue-material.min.css'
 //import 'vue-material/dist/theme/black-green-dark.css'
 
-import VueMq from 'vue-mq';
+import VueMq from '../node_modules/vue-mq';
 
 // import VueInstagram from 'vue-instagram'
-import VuePictureSwipe from 'vue-picture-swipe'
+import VuePictureSwipe from '../node_modules/vue-picture-swipe'
 
 
 export default function (Vue, { router, head, isClient }) {
