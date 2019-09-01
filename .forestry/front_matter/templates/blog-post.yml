@@ -22,7 +22,7 @@ fields:
   description: blog image
   default: "/uploads/06 - SB-6.jpg"
 pages:
+- blog/cupcake-ipsum.md
 - blog/sagan-ipsum.md
 - blog/lorem-ipsum.md
 - blog/espresso-ipsum.md
-- blog/cupcake-ipsum.md

@@ -2,7 +2,7 @@
 title: Cupcake ipsums
 excerpt: Cupcake ipsum dolor. Sit amet fruitcake jelly-o pie ice cream. Candy jujubes
   croissant donut oat cake jelly-o brownie jelly-o.
-date: 2019-04-18T17:00:00.000+00:00
+date: 2019-04-18 17:00:00 +0000
 author: Loke Carlsson
 image: "/uploads/06 - SB-6.jpg"
 
