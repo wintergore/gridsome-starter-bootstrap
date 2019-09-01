@@ -4,7 +4,7 @@ excerpt: Id roast latte, grounds turkish sweet skinny strong medium. Bar, sit, g
   cinnamon viennese redeye aroma blue mountain.
 date: 2019-04-20T17:00:00.000+00:00
 author: Loke Carlsson
-image: "/assets/images/logo.jpg"
+image: "/uploads/13 - SB-13.jpg"
 
 ---
 Foam, cultivar chicory grounds crema java wings. Iced, instant et irish caffeine cultivar that, aroma acerbic single origin froth decaffeinated. Blue mountain foam white qui to go filter saucer con panna foam black.
