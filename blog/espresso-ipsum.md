@@ -1,11 +1,12 @@
 ---
 title: Espresso ipsum
-excerpt: Id roast latte, grounds turkish sweet skinny strong medium. Bar, sit, grinder cinnamon viennese redeye aroma blue mountain.
-date: 2019-04-20 17:00:00 +0000
+excerpt: Id roast latte, grounds turkish sweet skinny strong medium. Bar, sit, grinder
+  cinnamon viennese redeye aroma blue mountain.
+date: 2019-04-20T17:00:00.000+00:00
 author: Loke Carlsson
-image: "/uploads/coffee.svg"
----
+image: "/images/burger-guy.svg"
 
+---
 Foam, cultivar chicory grounds crema java wings. Iced, instant et irish caffeine cultivar that, aroma acerbic single origin froth decaffeinated. Blue mountain foam white qui to go filter saucer con panna foam black.
 
 Aged, instant coffee, fair trade, qui siphon instant caramelization pumpkin spice shop chicory. Percolator dark, blue mountain cultivar aromatic at white half and half wings. Latte viennese, trifecta, cup latte java steamed saucer cortado.
