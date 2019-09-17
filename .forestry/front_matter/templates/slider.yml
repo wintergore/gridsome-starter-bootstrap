@@ -1,4 +1,44 @@
 ---
 label: slider
 hide_body: false
-fields: []
+fields:
+- name: imageone
+  type: file
+  config:
+    maxSize: 250
+  label: imageOne
+- name: imagetwo
+  type: file
+  config:
+    maxSize: 250
+  label: imageTwo
+- name: imagethree
+  type: file
+  config:
+    maxSize: 250
+  label: imageThree
+- name: imagefour
+  type: file
+  config:
+    maxSize: 250
+  label: imageFour
+- name: imagefive
+  type: file
+  config:
+    maxSize: 250
+  label: imageFive
+- name: imagesix
+  type: file
+  config:
+    maxSize: 250
+  label: ImageSix
+- name: imageseven
+  type: file
+  config:
+    maxSize: 250
+  label: imageSeven
+- name: imageeight
+  type: file
+  config:
+    maxSize: 250
+  label: imageEight
