@@ -33,9 +33,6 @@
           <md-button class="md-small-hide" to="/menus">MENUS</md-button>
           <md-button class="md-small-hide" to="/catering">CATERING</md-button>
           <md-button class="md-small-hide" to="/contact">CONTACT</md-button>
-          <!-- <div class="md-title md-display-1">
-            <span>MY WEBSITE NAME</span>
-          </div>-->
         </div>
       </md-app-toolbar>
 
